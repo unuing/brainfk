@@ -1,7 +1,4 @@
-accept = "><+-.,[]"
 pc = 0
-program = ""
-
 data_p = 0
 mem = [0]
 
@@ -70,7 +67,7 @@ inst = {
     "]": bnez
 }
 
-program = ''.join([i if i in accept else "" for i in input()])
+program = ''.join([i if i in inst else "" for i in input()])
 while pc < len(program):
     inst[program[pc]]()
     pc += 1
